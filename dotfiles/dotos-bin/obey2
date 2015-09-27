@@ -1,0 +1,52 @@
+#!/bin/bash
+#Obey2 by Kussic(@chaos6.net)
+# Based on the idea of Archbey2 by Mr Green
+# v 0.01
+
+colour="\e[01;36m" # Green
+os_string="dotOS"
+host_name=$(hostname)
+kernel=$(uname -r)
+arch_bit=$(uname -m)
+up_time=$(uptime | awk '{print $3}' | sed 's|,||g')
+wm=$DE
+#num_packs=$(pacman -Qq | wc -l)
+cpu_name=$(grep 'model name' /proc/cpuinfo  | uniq | awk -F':' '{print $2}' | cut -f1 -d"@")
+ram_total=$(free -mto | grep Mem: | awk '{print $2}')
+ram_used=$(free -m | grep "buffers/cache" | awk '{print $3}')
+my_shell=$(echo $SHELL | sed 's|/bin/||g')
+#df -h --output=fstype,size,used /home | tail -n1 | awk '{ print $3" / "$2" ("$1")"}'
+#root_space=$(df -h --output=fstype,size,used / | tail -n1 | awk '{ print $3" / "$2" ("$1")"}')
+root_space=$(df -h 2> /dev/null | grep sda1 | awk '{ print $3" / "$2""}')
+#home_space=$(df -h --output=fstype,size,used $HOME | tail -n1 | awk '{ print $3" / "$2" ("$1")"}')
+
+
+echo -e '\e[01;33m                          oooo$$$$$$$$$$$$oooo\e[00m'
+echo -e '\e[01;33m                      oo$$$$$$$$$$$$$$$$$$$$$$$$o\e[00m'
+echo -e '\e[01;33m                   oo$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o         o$   $$ o$\e[00m'
+echo -e '\e[01;33m   o $ oo        o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$o       $$ $$ $$o$\e[00m'
+echo -e '\e[01;33moo $ $ "$      o$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$o       $$$o$$o$\e[00m'
+echo -e '\e[01;33m"$$$$$$o$     o$$$$$$$$$      $$$$$$$$$$$      $$$$$$$$$$o    $$$$$$$$\e[00m'
+echo -e '\e[01;33m  $$$$$$$    $$$$$$$$$$$      $$$$$$$$$$$      $$$$$$$$$$$$$$$$$$$$$$$\e[00m'
+echo -e '\e[01;33m  $$$$$$$$$$$$$$$$$$$$$$$    $$$$$$$$$$$$$    $$$$$$$$$$$$$$  """$$$\e[00m'
+echo -e '\e[01;33m   "$$$""""$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     "$$$\e[00m'
+echo -e '\e[01;33m    $$$   o$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     "$$$o\e[00m'
+echo -e '\e[01;33m   o$$"   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$       $$$o\e[00m'
+echo -e '\e[01;33m   $$$    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$""$$$$$$ooooo$$$$o\e[00m'
+echo -e '\e[01;33m  o$$$oooo$$$$$  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  o$$$$$$$$$$$$$$$$$\e[00m'
+echo -e '\e[01;33m  $$$$$$$$"$$$$   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$     $$$$""""""""\e[00m'
+echo -e '\e[01;33m """"       $$$$    "$$$$$$$$$$$$$$$$$$$$$$$$$$$$"      o$$$\e[00m'
+echo -e '\e[01;33m            "$$$o     """$$$$$$$$$$$$$$$$$$"$$"         $$$\e[00m'
+echo -e '\e[01;33m              $$$o          "$$""$$$$$$""""           o$$$\e[00m'
+echo -e '\e[01;33m               $$$$o                                o$$$"\e[00m'
+echo -e '\e[01;33m                "$$$$o      \e[00;31mo$$$$$$o"$$$$o\e[01;33m        o$$$$\e[00m'
+echo -e '\e[01;33m                  "$$$$$oo     \e[00;31m""$$$$o$$$$$o\e[01;33m   o$$$$""\e[00m'
+echo -e '\e[01;33m                     ""$$$$$oooo  \e[00;31m"$$$o$$$$$$\e[01;33m$$$"""\e[00m'
+echo -e '\e[01;33m                        ""$$$$$$$oo \e[00;31m$$$$$$$$$$\e[00m'
+echo -e '\e[01;33m                                """"\e[00;31m$$$$$$$$$$$\e[00m'
+echo -e '\e[01;33m                                    \e[00;31m$$$$$$$$$$$$\e[00m'
+echo -e '\e[01;33m                                     \e[00;31m$$$$$$$$$$"\e[00m'
+echo -e '\e[01;33m                                      \e[00;31m"$$$""""\e[00m'
+echo -e "${colour} OS:\e[00m ${os_string} ${arch_bit} | ${colour} Hostname:\e[00m ${host_name} | ${colour}Kernel:\e[00m ${kernel}"
+echo -e "${colour} RAM:\e[00m ${ram_used} / ${ram_total} MB | ${colour}CPU:\e[00m${cpu_name} | ${colour}Disk:\e[00m ${root_space}\e[00m"
+echo

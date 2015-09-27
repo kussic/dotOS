@@ -1,0 +1,21 @@
+background no
+out_to_console yes
+out_to_x no
+own_window no
+update_interval 1
+total_run_times 0
+short_units yes
+pad_percents 3
+cpu_avg_samples 2
+
+
+
+TEXT
+[
+{"full_text": "cpu: ${cpu}%", "color":"\#cf6a4c"},
+{"full_text": "ram: $mem","color":"\#cda869"},
+{"full_text": "${if_existing /proc/net/route eth0}eth0: ${addr eth0}${endif}${if_up eth1}eth1: ${addr eth1}${endif}${if_up ppp0}m: ${addr ppp0}${endif}${if_up hso0}m: ${addr hso0}${endif}","color":"\#89b859"},
+{"full_text": "bat: ${battery_percent}%", "color":"\#838184"},
+{"full_text": "${time %Y-%m-%d}", "color":"\#afc4db"}, 
+{"full_text": "${time %H:%M}", "color":"\#8f9d6a"}
+],
