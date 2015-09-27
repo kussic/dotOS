@@ -1,6 +1,6 @@
-# dotOS - Kali2 like a real boy
+# dotOS - Kali 2 like a real boy
 dotOS is a custom Kali 2 installation geared towards hackers who feel more comfortable with a keyboard and don't appreciate the delays introduced by using a mouse all the time.   
-Build with i3wm, vimperator, ptf and a few extra things here and there that make [my](https://twitter.com/kussic) hacking more streamlined.
+Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few extra things here and there that make [my](https://twitter.com/kussic) hacking more streamlined.
 
 ![Just a screenshot](screenshot.png "A screenshot")
 
