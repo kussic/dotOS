@@ -9,7 +9,7 @@ Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few e
 1. Build your custom Kali 2 i3wm iso   
     From an existing Kali installation run the following commands:
 	```
-	apt-get install curl git live-build cdebootstrap
+	apt-get install curl git live-build debootstrap
 	git clone git://git.kali.org/live-build-config.git
 	cd live-build-config
 	```
@@ -78,7 +78,7 @@ Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few e
 	dpkg --add-architecture i386 && apt-get update && apt-get install wine32
 
 	#Install some most needed extra tools
-	apt-get install arp-scan passing-the-hash sslyze netdiscover mono-runtime proxychains freerdp tshark responder python-openssl wmis hashid python-pyside eyewitness mitmproxy netwox ike-scan
+	apt-get install arp-scan passing-the-hash sslyze netdiscover mono-runtime proxychains freerdp tshark responder python-openssl wmis hashid python-pyside eyewitness mitmproxy netwox ike-scan python-pip zsh
 
 	#Install the awesomeness that is impacket
 	pip install pyasn1 && pip install impacket
@@ -98,7 +98,7 @@ Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few e
 
 6. Install the custom i3wm dotfiles
 	```
-	mv ~/i3 ~/i3-bak
+	mv ~/.i3 ~/.i3-bak
 	mv ~/dotOS/dotfiles/i3 ~/.i3
 	```
 
