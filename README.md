@@ -9,7 +9,8 @@ Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few e
 1. Build your custom Kali 2 i3wm iso   
     From an existing Kali installation run the following commands:
 	```
-	apt-get install curl git live-build debootstrap
+	apt-get update
+	apt-get install curl git live-build cdebootstrap
 	git clone git://git.kali.org/live-build-config.git
 	cd live-build-config
 	```
@@ -49,7 +50,7 @@ Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few e
 
 			
 	Run the build script:
-	`./build.sh --distribution sana --variant i3wm --verbose`
+	`./build.sh --distribution kali-rolling --variant i3wm --verbose`
 
 	>NOTE: this will take its sweet time, at the end you will have an .iso file if everything went right!
 
