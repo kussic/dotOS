@@ -1,6 +1,6 @@
 # dotOS - Kali 2 like a real boy
 dotOS is a custom Kali 2 installation geared towards hackers who feel more comfortable with a keyboard and don't appreciate the delays introduced by using a mouse all the time.   
-Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few extra things here and there that make [my](https://twitter.com/kussic) hacking more streamlined.
+Build with Kali 2, i3wm, fish shell, ptf, vimperator (firefox), conky and a few extra things here and there that make [my](https://twitter.com/kussic) hacking more streamlined.
 
 ![Just a screenshot](screenshot.png "A screenshot")
 
@@ -91,14 +91,14 @@ Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few e
 	cd ~ && git clone https://github.com/kussic/dotOS.git
 	```
 
-5. Install Fish Shell (http://fishshell.com) 
+5. Install [Fish Shell] (http://fishshell.com) 
 	```
 	apt-get install bc
     	Download the latest "Debian 8" package from: https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A2&package=fish
 	dpkg -i <whateverthepackagewas called.deb>
 	chsh -s /usr/bin/fish
 	```
-	_Optional: append the "DO NOT PANIC" logo to .zshrc_ 
+	_Optional: append the "DO NOT PANIC" logo to ~/.config/fish/config.fish
 	```
 	mv ~/dotOS/dotfiles/dotos-bin ~/.dotos-bin
 	echo "~/.dotos-bin/obey2" >> ~/.config/fish/config.fish
