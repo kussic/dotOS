@@ -6,7 +6,10 @@ Build with Kali 2, i3wm, fish shell, ptf, vimperator (firefox), conky and a few 
 
 >Step by step instructions below. Your milleage may vary since things do change every now and again. If some instruction doesn't work fix it and then let me know. _I'm not your customer support  desk!_
 
-1. Build your custom Kali 2 i3wm iso   
+0. Skip step (2) below and download the iso   
+    Go to the [i3wm-kali-rolling release] (https://github.com/kussic/dotOS/releases/tag/i3wm-kali-rolling) and download the iso.
+
+1. OR Build your custom Kali 2 i3wm iso   
     From an existing Kali installation run the following commands:
 	```
 	apt-get update
@@ -81,7 +84,7 @@ Build with Kali 2, i3wm, fish shell, ptf, vimperator (firefox), conky and a few 
 	#Install some most needed extra tools
 	apt-get install arp-scan passing-the-hash sslyze netdiscover mono-runtime proxychains freerdp tshark responder python-openssl wmis hashid python-pyside eyewitness mitmproxy netwox ike-scan python-pip 
 	
-	#(optional) Install the awesome curses WICD wifi manager
+	#(optional) Install the awesome curses WICD network manager
 	apt-get install wicd-curses
 
 	#Install the awesomeness that is impacket
@@ -98,7 +101,7 @@ Build with Kali 2, i3wm, fish shell, ptf, vimperator (firefox), conky and a few 
 	dpkg -i <whateverthepackagewas called.deb>
 	chsh -s /usr/bin/fish
 	```
-	_Optional: append the "DO NOT PANIC" logo to ~/.config/fish/config.fish
+	_Optional: append the "DO NOT PANIC" logo to ~/.config/fish/config.fish_
 	```
 	mv ~/dotOS/dotfiles/dotos-bin ~/.dotos-bin
 	echo "~/.dotos-bin/obey2" >> ~/.config/fish/config.fish
