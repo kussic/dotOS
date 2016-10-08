@@ -79,7 +79,10 @@ Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few e
 	dpkg --add-architecture i386 && apt-get update && apt-get install wine32
 
 	#Install some most needed extra tools
-	apt-get install arp-scan passing-the-hash sslyze netdiscover mono-runtime proxychains freerdp tshark responder python-openssl wmis hashid python-pyside eyewitness mitmproxy netwox ike-scan python-pip zsh
+	apt-get install arp-scan passing-the-hash sslyze netdiscover mono-runtime proxychains freerdp tshark responder python-openssl wmis hashid python-pyside eyewitness mitmproxy netwox ike-scan python-pip 
+	
+	#(optional) Install the awesome curses WICD wifi manager
+	apt-get install wicd-curses
 
 	#Install the awesomeness that is impacket
 	pip install pyasn1 && pip install impacket
@@ -88,13 +91,17 @@ Build with Kali 2, i3wm, oh-my-zsh, ptf, vimperator (firefox), conky and a few e
 	cd ~ && git clone https://github.com/kussic/dotOS.git
 	```
 
-5. Install Oh-my-zsh   
-    `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
-	
+5. Install Fish Shell (http://fishshell.com) 
+	```
+	apt-get install bc
+    	Download the latest "Debian 8" package from: https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A2&package=fish
+	dpkg -i <whateverthepackagewas called.deb>
+	chsh -s /usr/bin/fish
+	```
 	_Optional: append the "DO NOT PANIC" logo to .zshrc_ 
 	```
 	mv ~/dotOS/dotfiles/dotos-bin ~/.dotos-bin
-	echo "~/.dotos-bin/obey2" >> ~/.zshrc
+	echo "~/.dotos-bin/obey2" >> ~/.config/fish/config.fish
 	```
 
 6. Install the custom i3wm dotfiles
