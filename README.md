@@ -104,12 +104,13 @@ Build with Kali 2, i3wm, fish shell, ptf, vimperator (firefox), conky and a few 
 	```
 	apt-get install bc
     	Download the latest "Debian 8" package from: https://software.opensuse.org/download.html?project=shells%3Afish%3Arelease%3A2&package=fish
-	dpkg -i <whateverthepackagewas called.deb>
+	dpkg -i <whateverthepackagewascalled.deb>
 	chsh -s /usr/bin/fish
 	```
 	_Optional: append the "DO NOT PANIC" logo to ~/.config/fish/config.fish_
 	```
 	mv ~/dotOS/dotfiles/dotos-bin ~/.dotos-bin
+	fish
 	echo "~/.dotos-bin/obey2" >> ~/.config/fish/config.fish
 	```
 
