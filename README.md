@@ -65,30 +65,36 @@ Build with Kali 2, i3wm, fish shell, ptf, vimperator (firefox), conky and a few 
    VirtualBox     | apt-get install virtualbox-guest-utils
    VMware         | _Use the vmware tools that come with Player/Workstation_
 
-3. Add Penetration Testing Framework   
-   The following will install my own fork of PTF, which has some additional tools removed a number of tools I feel are better off if you do it the "kali" way (e.g. metasploit).   
+3. Add Penetration Testing Framework     
    Install, run it and just add the tools you like, as needed…
    ```
    cd /opt/
-   git clone https://github.com/kussic/ptf.git
+   git clone https://github.com/trustedsec/ptf.git
    cd ptf
    ./ptf
    ```	
 		
 		
-4. Add extra tools
+4. (Optional) Add extra tools
 	``` 
 	#Add i386 architecture support and wine32
 	dpkg --add-architecture i386 && apt-get update && apt-get install wine32
 
 	#Install some most needed extra tools
-	apt-get install arp-scan passing-the-hash sslyze netdiscover mono-runtime proxychains freerdp tshark responder python-openssl wmis hashid python-pyside eyewitness mitmproxy netwox ike-scan python-pip 
+	apt-get install arp-scan passing-the-hash netdiscover mono-runtime proxychains tshark python-openssl wmis hashid python-pyside mitmproxy netwox python-pip dh-autoreconf
 	
-	#(optional) Install the awesome curses WICD network manager
+	#Use PTF to install a bunch of useful tools
+	* modules/exploitation/responder
+	* xfreerdp (custom)
+	* modules/intelligence-gathering/eyewitness
+	* modules/vulnerability-analysis/sslyze
+	* modules/vulnerability-analysis/ike-scan
+	* modules/exploitation/impacket
+	* nfsshell (custom)
+	
+	#Install the awesome curses WICD network manager
 	apt-get install wicd-curses
 
-	#Install the awesomeness that is impacket
-	pip install pyasn1 && pip install impacket
 
 	#Get your local clone
 	cd ~ && git clone https://github.com/kussic/dotOS.git
@@ -123,5 +129,4 @@ Build with Kali 2, i3wm, fish shell, ptf, vimperator (firefox), conky and a few 
 ##Credits
 * Obey2 based on the idea of Archbey2 by Mr Green
 * i3wm scripts based on the work of https://github.com/strang3quark
-* PTF is forked from https://github.com/trustedsec/ptf and made by @HackingDave
 * Vimperator firefox CSS by http://twily.info/
