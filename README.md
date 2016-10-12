@@ -127,6 +127,13 @@ Build with Kali 2, i3wm, fish shell, ptf, vimperator (firefox), conky and a few 
 	4. Install Stylish plugin from within Firefox from [here] (https://addons.mozilla.org/en-US/firefox/addon/stylish)
 	5. Apply the "~/dotOS/dotfiles/vimperator/firefox-css" to Stylish
 
+8. Oracle Java
+	1. Download the right version from http://java.com
+	2. tar xzf <javafile>.tgz
+	3. mv <javadir> /opt
+	4. update-alternatives --install /usr/bin/java java /opt/<javadir>/bin/java 1
+	5. update-alternatives --set java /opt/<javadir>/bin/java
+
 ##Credits
 * Obey2 based on the idea of Archbey2 by Mr Green
 * i3wm scripts based on the work of https://github.com/strang3quark
